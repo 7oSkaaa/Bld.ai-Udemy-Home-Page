@@ -79,13 +79,16 @@ li {
     border: 1px solid black;
     width: 80%;
     margin: auto;
+    word-break: break-all;
 }
 
 .courses-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin: 2rem;
+    align-items: stretch;
+    padding-bottom: 2rem;
 }
 
 .navbar {
