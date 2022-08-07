@@ -271,6 +271,10 @@ section p {
     margin-bottom: 1rem;
 }
 
+.explore:hover {
+    background: whitesmoke;
+}
+
 .stars {
     color: orange;
 }
