@@ -362,6 +362,14 @@ section p {
         width: 100%;
         padding: 0 1rem;
     }
+    .courses>.course-card {
+        width: 50%;
+        margin: 100px auto;
+    }
+    .explore {
+        width: 2rem;
+        font-size: 50%;
+    }
 }
 
 @media screen and (max-width: 1080px) {
@@ -388,10 +396,64 @@ section p {
     .shopping-cart {
         width: auto;
     }
+    .courses>.course-card {
+        width: 33%;
+        margin: 100px auto;
+    }
+    .explore {
+        width: 2rem;
+        font-size: 50%;
+    }
+    .center_element>h3,
+    .center_element>p {
+        font-size: 1rem !important;
+    }
+    section h1,
+    p {
+        font-size: 1.2rem;
+        text-align: left;
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 1200px) {
     .search-bar {
         flex-grow: 1;
+    }
+    .courses>.course-card {
+        width: 20%;
+        margin: 100px auto;
+    }
+    .explore {
+        width: 6rem;
+        font-size: 50%;
+    }
+    .center_element>h3,
+    .center_element>p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .center_element>h3,
+    .center_element>p {
+        font-size: 0.1rem !important;
+    }
+    .explore {
+        width: 3rem !important;
+        font-size: 0.1rem !important;
+    }
+    h4,
+    .stars,
+    .grey,
+    .price,
+    .author {
+        font-size: 0.0005rem !important;
+    }
+    section h1,
+    p {
+        font-size: 0.8rem;
+        text-align: left;
+        padding: 0;
     }
 }
