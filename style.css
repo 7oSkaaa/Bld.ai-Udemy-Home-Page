@@ -72,6 +72,7 @@ li {
     font-size: 1rem;
     font-weight: bold;
     display: block;
+    margin: 0rem 2.8rem;
 }
 
 .courses {
@@ -294,6 +295,26 @@ section p {
     height: 100%;
 }
 
+.courses-desc {
+    width: 100%;
+    padding: 0rem 2rem;
+    padding-top: 1rem;
+}
+
+h3.courses-desc {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+p.courses-desc {
+    font-size: 1rem;
+}
+
+.above-courses {
+    width: 100%;
+    margin: 1rem;
+}
+
 
 /* Header */
 
@@ -313,12 +334,12 @@ section p {
 
 .head-bar {
     font-family: 'Tiro Gurmukhi', serif;
-    margin-top: -15%;
-    height: 60%;
+    height: 15rem;
     background-color: white;
-    width: 40%;
+    width: 35rem;
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
-    padding: 3%;
+    padding: 2.5rem;
+    margin: 0rem 2rem
 }
 
 .alarmphoto {
@@ -332,17 +353,14 @@ section p {
     .search-bar {
         flex-grow: 1;
     }
-    .courses>.course-card {
-        width: 20%;
-        margin: 100px auto;
-    }
-    .explore {
-        width: 6rem;
-        font-size: 50%;
-    }
-    .center_element>h3,
-    .center_element>p {
-        font-size: 1.5rem;
+    .head-bar {
+        font-family: 'Tiro Gurmukhi', serif;
+        height: 15rem;
+        background-color: white;
+        width: 35rem;
+        box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+        padding: 2.5rem;
+        margin: 0rem 1rem
     }
 }
 
@@ -356,6 +374,11 @@ section p {
         width: 100%;
         margin-top: 0rem;
         box-shadow: 0 0;
+    }
+    .head-bar h1,
+    .head-bar h3 {
+        padding: auto;
+        text-align: center;
     }
     .search-bar {
         flex-grow: 1;
@@ -375,8 +398,10 @@ section p {
         margin: 100px auto;
     }
     .explore {
-        width: 2rem;
+        width: 6rem;
         font-size: 50%;
+        margin: 3rem;
+        height: 2rem;
     }
     .center_element>h3,
     .center_element>p {
@@ -388,9 +413,32 @@ section p {
         text-align: left;
         padding: 0;
     }
+    .courses-desc {
+        width: 100%;
+        padding: 0rem 2rem;
+        padding-top: 1rem;
+    }
+    h3.courses-desc {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    p.courses-desc {
+        font-size: 0.5rem;
+    }
+    .above-courses {
+        width: 100%;
+        margin: 1rem;
+    }
+    .above-courses p,
+    .above-courses h3 {
+        font-size: 1rem;
+    }
+    .courses {
+        width: 80%;
+    }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .nav-items {
         justify-content: space-between;
     }
@@ -459,9 +507,8 @@ section p {
         height: 2rem;
     }
     .above-courses {
-        width: 100%;
-        padding: 0.2rem;
-        margin: 0.2rem;
+        width: 80%;
+        margin: 1rem;
     }
     section>.above-courses>p,
     section>.above-courses>h1 {
@@ -481,5 +528,15 @@ section p {
     }
     .head-continer>img {
         width: 100%;
+    }
+    .above-courses p,
+    .above-courses h3 {
+        font-size: 1rem;
+    }
+    section {
+        width: 100%;
+    }
+    .courses {
+        width: 80%;
     }
 }
