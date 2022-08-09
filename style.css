@@ -479,10 +479,10 @@ p.courses-desc {
         width: 20rem;
         margin: 1rem 1rem;
     }
-    h4,
-    .price,
-    .rating>.stars,
-    .rating>.grey,
+    div h4,
+    div .price,
+    .stars,
+    .grey,
     .author {
         font-size: 0.5rem;
         padding-bottom: 0.2rem;
@@ -511,7 +511,7 @@ p.courses-desc {
     }
     section>.above-courses>p,
     section>.above-courses>h1 {
-        margin: 0rem;
+        margin-left: 2rem;
         font-size: 1rem;
     }
     .courses-desc {
