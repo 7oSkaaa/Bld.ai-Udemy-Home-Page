@@ -11,7 +11,9 @@ ul {
     flex-shrink: 1;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.2) inset;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: inset 0 10px 6px -6px #777;
     width: 100%;
     padding: 0% 0.8%;
     list-style-type: none;
