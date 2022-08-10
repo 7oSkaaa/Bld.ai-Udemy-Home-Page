@@ -151,7 +151,11 @@ nav a {
     position: relative;
 }
 
-@media (width <=50rem) {
+.menu {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
     .dis-item,
     .navbar-category,
     .nav-ca {
@@ -161,6 +165,7 @@ nav a {
         background: none;
         border: none;
         font-size: 1.2rem;
+        display: initial;
     }
     .menu:hover {
         color: purple;
@@ -168,14 +173,8 @@ nav a {
     .navbar {
         height: 4rem;
     }
-}
-
-@media only screen and (min-width: 800px) {
     #teach-udemy,
     #udemy-bus,
-    .menu {
-        display: none;
-    }
     .search-bar {
         flex-grow: 1;
     }
