@@ -203,7 +203,7 @@ nav a {
         display: none;
     }
     .navbar {
-        margin: auto;
+        width: 100%;
     }
 }
 
@@ -213,5 +213,8 @@ nav a {
     }
     .search-container {
         width: auto;
+    }
+    .navbar {
+        width: 100%;
     }
 }
