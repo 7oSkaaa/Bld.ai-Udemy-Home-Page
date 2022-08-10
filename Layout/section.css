@@ -1,0 +1,133 @@
+section {
+    width: 85rem;
+    margin: auto;
+    padding: 1rem 1rem;
+}
+
+.above-courses {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Tiro Gurmukhi', serif;
+    font-size: 1.5rem;
+    margin: 2rem 0rem;
+}
+
+.courses {
+    width: 100%;
+    margin: 1rem 0rem;
+    border: 1px solid black;
+    padding: 2rem 2rem;
+}
+
+.courses h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0rem;
+}
+
+.courses p {
+    font-size: 0.8rem;
+    margin: 0.5rem 0rem;
+}
+
+.courses-desc {
+    width: 70%;
+}
+
+.explore {
+    width: 8rem;
+    background: none;
+    height: 3.5rem;
+    margin: 1rem 0rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.explore:hover {
+    background: whitesmoke;
+}
+
+.courses-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0.9rem;
+}
+
+.card {
+    width: 15rem;
+}
+
+.card img {
+    width: 100%;
+}
+
+.stars {
+    color: orange;
+    font-weight: bold;
+}
+
+.author {
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grey {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.price {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1400px) {
+    section {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    section {
+        width: 80%;
+    }
+    .courses h3 {
+        font-size: 1rem;
+    }
+    .courses p {
+        font-size: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .courses h3 {
+        font-size: 0.8rem;
+    }
+    .courses p {
+        font-size: 0.5rem;
+    }
+    .courses-desc {
+        width: 100%;
+    }
+    .above-courses {
+        font-size: 1rem;
+    }
+    .explore {
+        width: 7rem;
+        height: 2.5rem;
+        font-size: 0.5rem;
+    }
+    .courses-cards {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+    .price {
+        font-size: 0.7rem;
+    }
+}
