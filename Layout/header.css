@@ -40,7 +40,7 @@
         width: 40%;
     }
     .head-continer {
-        margin: 0rem 1rem !important;
+        margin: 0rem 1rem;
     }
 }
 
@@ -81,10 +81,19 @@
 @media only screen and (max-width: 1400px) {
     .head-continer {
         width: 100%;
-        margin-top: 0rem;
+        margin: 0rem 0rem;
     }
     .head-bar {
-        height: 40vh;
+        height: 50%;
         margin-top: 0rem;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    .head-continer {
+        width: 100%;
+    }
+    .head-bar {
+        height: 100%;
     }
 }
