@@ -1,0 +1,203 @@
+ul {
+    margin: 0;
+    list-style-type: none;
+    flex-grow: 1;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.2) inset;
+    width: 100%;
+    padding: 0% 0.8%;
+    list-style-type: none;
+    height: 5rem;
+    font-family: 'Anek Bangla', sans-serif;
+    font-size: 0.85rem;
+}
+
+.logo {
+    width: 5rem;
+}
+
+.nav-items {
+    margin: 0.5rem;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+form {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    padding: 0;
+    font-size: 0.9em;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+nav a,
+.shopping-cart {
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover,
+.shopping-cart:hover {
+    color: purple;
+}
+
+nav a {
+    width: 3rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.search-container {
+    flex-grow: 1;
+    width: 100%;
+    border-radius: 15rem;
+    border: black 1px solid;
+    position: relative;
+    background-color: whitesmoke;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 1rem;
+    height: 3rem;
+}
+
+.search-icon,
+.search-bar {
+    border: none;
+    position: relative;
+    float: left;
+    background: none;
+}
+
+.search-icon {
+    color: grey;
+    margin: 0.25rem 0.5rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.search-icon:hover {
+    color: purple;
+}
+
+.navbar-category {
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+}
+
+.nav-buttons {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 50%;
+}
+
+.nav-buttons button {
+    margin-left: 10px;
+    width: 80px;
+    outline: none;
+}
+
+#reg {
+    background: black;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+#log {
+    font-weight: bold;
+    font-size: 0.8rem;
+    background: white;
+}
+
+#language {
+    width: 3rem;
+    background: none;
+}
+
+#log:hover,
+#language:hover {
+    background: whitesmoke;
+}
+
+[class^="navbar__"]:not(:last-child) {
+    margin: 0 10px;
+}
+
+.navbar>nav {
+    padding: 0 2.4rem;
+    position: relative;
+}
+
+@media (width <=50rem) {
+    .dis-item,
+    .navbar-category,
+    .nav-ca {
+        display: none;
+    }
+    .menu {
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+    }
+    .menu:hover {
+        color: purple;
+    }
+    .navbar {
+        height: 4rem;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    #teach-udemy,
+    #udemy-bus,
+    .menu {
+        display: none;
+    }
+    .search-bar {
+        flex-grow: 1;
+    }
+}
+
+@media only screen and (min-width: 920px) {
+    #teach-udemy {
+        display: initial;
+    }
+    .search-bar {
+        flex-grow: 1;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .search-bar {
+        flex-grow: 1;
+    }
+    .search-container {
+        width: 45%;
+    }
+    #udemy-bus {
+        display: initial;
+    }
+}
