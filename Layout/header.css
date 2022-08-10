@@ -36,6 +36,12 @@
     .head-bar {
         width: 25rem;
     }
+    .alarmphoto {
+        width: 40%;
+    }
+    .head-continer {
+        margin: 0rem 1rem !important;
+    }
 }
 
 @media only screen and (max-width: 800px) {
