@@ -70,7 +70,7 @@ nav a {
 
 .search-container {
     flex-grow: 1;
-    width: 100%;
+    width: auto;
     border-radius: 15rem;
     border: black 1px solid;
     position: relative;
@@ -180,23 +180,32 @@ nav a {
     }
 }
 
-@media only screen and (min-width: 920px) {
+@media only screen and (max-width: 920px) {
     #teach-udemy {
-        display: initial;
-    }
-    .search-bar {
-        flex-grow: 1;
+        display: none;
     }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (max-width: 1080px) {
     .search-bar {
         flex-grow: 1;
     }
     .search-container {
-        width: 45%;
+        width: auto;
     }
     #udemy-bus {
-        display: initial;
+        display: none;
+    }
+    .navbar {
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .search-bar {
+        flex-grow: 1;
+    }
+    .search-container {
+        width: auto;
     }
 }
