@@ -20,7 +20,7 @@
     padding: 2rem;
     margin-top: 3rem;
     font-family: 'Tiro Gurmukhi', serif;
-    height: 30vh;
+    height: 12rem;
 }
 
 .head-bar h1 {
@@ -89,7 +89,7 @@
     }
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (max-width: 1080px) {
     .head-continer {
         width: 100%;
     }
