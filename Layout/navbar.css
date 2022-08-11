@@ -20,6 +20,8 @@ ul {
     height: 5rem;
     font-family: 'Anek Bangla', sans-serif;
     font-size: 0.85rem;
+    position: relative;
+    z-index: 999;
 }
 
 .logo {
