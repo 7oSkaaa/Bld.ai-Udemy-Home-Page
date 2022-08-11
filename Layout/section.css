@@ -14,6 +14,32 @@ section {
     margin: 2rem 0rem;
 }
 
+.toggle-courses {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 2rem;
+}
+
+.toggle-courses label {
+    font-weight: bold;
+    color: grey;
+    cursor: pointer;
+}
+
+.toggle-courses>input[type="radio"] {
+    display: none;
+}
+
+.toggle-courses>input[type="radio"]:checked+label {
+    color: black;
+}
+
+.toggle-courses>input[type="radio"]:hover+label {
+    color: black;
+}
+
 .courses {
     width: 100%;
     margin: 1rem 0rem;
