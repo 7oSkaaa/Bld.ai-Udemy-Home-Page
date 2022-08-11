@@ -14,7 +14,7 @@ section {
     margin: 2rem 0rem;
 }
 
-.toggle-courses {
+.courses-tab {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -22,21 +22,21 @@ section {
     gap: 2rem;
 }
 
-.toggle-courses label {
+.courses-tab label {
     font-weight: bold;
     color: grey;
     cursor: pointer;
 }
 
-.toggle-courses>input[type="radio"] {
+.courses-tab>input[type="radio"] {
     display: none;
 }
 
-.toggle-courses>input[type="radio"]:checked+label {
+.courses-tab>input[type="radio"]:checked+label {
     color: black;
 }
 
-.toggle-courses>input[type="radio"]:hover+label {
+.courses-tab>input[type="radio"]:hover+label {
     color: black;
 }
 
