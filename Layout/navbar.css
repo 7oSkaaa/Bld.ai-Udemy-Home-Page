@@ -164,9 +164,8 @@ nav a {
 }
 
 @media only screen and (max-width: 800px) {
-    .dis-item,
-    .navbar-category,
-    .nav-ca {
+    .disappear-item,
+    .navbar-category {
         display: none;
     }
     .menu {
@@ -180,6 +179,7 @@ nav a {
     }
     .navbar {
         height: 4rem;
+        padding: 0rem 2rem;
     }
     #teach-udemy,
     #udemy-bus,
