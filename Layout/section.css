@@ -116,6 +116,12 @@ section {
     section {
         width: 90%;
     }
+    .courses h3 {
+        font-size: 1.5rem;
+    }
+    .courses p {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -123,10 +129,10 @@ section {
         width: 80%;
     }
     .courses h3 {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     .courses p {
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
 }
 
@@ -146,6 +152,9 @@ section {
     .above-courses {
         font-size: 1rem;
         width: 100%;
+        padding-left: 1rem;
+    }
+    .courses-tab {
         padding-left: 1rem;
     }
     .explore {

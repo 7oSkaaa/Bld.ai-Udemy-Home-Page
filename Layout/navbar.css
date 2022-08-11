@@ -160,7 +160,7 @@ nav a {
 
 #teach-udemy,
 #udemy-bus {
-    width: 9rem !important;
+    width: 9rem;
 }
 
 @media only screen and (max-width: 800px) {
