@@ -63,7 +63,8 @@ section {
 }
 
 .explore {
-    width: 8rem;
+    width: auto;
+    padding: 1rem;
     background: none;
     height: 3.5rem;
     margin: 1rem 0rem;
@@ -79,13 +80,13 @@ section {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: stretch;
     gap: 0.9rem;
 }
 
 .card {
-    width: 15rem;
+    width: 19rem;
 }
 
 .card img {
@@ -93,7 +94,7 @@ section {
 }
 
 .stars {
-    color: orange;
+    color: rgb(243, 166, 24);
     font-weight: bold;
 }
 
@@ -134,6 +135,12 @@ section {
     .courses p {
         font-size: 1rem;
     }
+    .courses-cards {
+        justify-content: space-evenly;
+    }
+    .card {
+        width: 45%;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -158,9 +165,10 @@ section {
         padding-left: 1rem;
     }
     .explore {
-        width: 7rem;
+        width: auto;
         height: 2.5rem;
-        font-size: 0.5rem;
+        font-size: 0.7rem;
+        padding: 0.5rem;
     }
     .courses-cards {
         width: 100%;
@@ -169,5 +177,14 @@ section {
     }
     .price {
         font-size: 0.7rem;
+    }
+    .card {
+        width: 48%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .card {
+        width: 100%;
     }
 }

@@ -1,0 +1,202 @@
+{
+    "title": "Top courses in JavaScript",
+    "header": "Grow your software development skills with JavaScript", 
+    "description": "JavaScript is a text-based computer programming language used to make dynamic web pages. A must-learn for aspiring web developers or programmers, JavaScript can be used for features like image carousels, displaying countdowns and timers, and playing media on a webpage. With JavaScript online classes, you can learn to build",
+    "courses": [
+        {
+            "id": 8324,
+            "title": "Javascript for Beginners",
+            "headline": "Learn javascript online and supercharge your web design with this Javascript for beginners training course.",
+            "rating": 4.4421487,
+            "image": "https://img-c.udemycdn.com/course/750x422/8324_fa84_13.jpg",
+            "instructors": [
+                {
+                    "name": "Tech Learning Network",
+                    "jop": "Career Building Digital Skills Training",
+                    "image": "https://img-c.udemycdn.com/user/100x100/11439_12bd_13.jpg"
+                }
+            ],
+            "price": 14.99
+        },
+        {
+            "id": 63612,
+            "title": "1 Hour JavaScript",
+            "headline": "Learn how to code in JavaScript in 1 hour. This class is set up for complete beginners!",
+            "rating": 4.3560605,
+            "image": "https://img-c.udemycdn.com/course/750x422/63612_8797_4.jpg",
+            "instructors": [
+                {
+                    "name": "John Bura",
+                    "jop": "Best Selling Instructor Web/App/Game Developer 700k Students",
+                    "image": "https://img-c.udemycdn.com/user/100x100/55737_2d11_6.jpg"
+                }
+            ],
+            "price": 16.99
+        },
+        {
+            "id": 364426,
+            "title": "JavaScript: Understanding the Weird Parts",
+            "headline": "An advanced JavaScript course for everyone! Scope, closures, prototypes, 'this', build your own framework, and more.",
+            "rating": 4.7157393,
+            "image": "https://img-c.udemycdn.com/course/750x422/364426_2991_6.jpg",
+            "instructors": [
+                {
+                    "name": "Anthony Alicea",
+                    "jop": "Software Developer, Architect, and UX Designer",
+                    "image": "https://img-c.udemycdn.com/user/100x100/2467626_f2e0_3.jpg"
+                }
+            ],
+            "price": 19.99
+        },
+        {
+            "id": 405818,
+            "title": "Javascript for Beginners Learn by Doing Practical Exercises",
+            "headline": "JavaScript for Beginners : Work closely with me doing exercises & learn more. I make Javascript easy for you guaranteed.",
+            "rating": 4.3827057,
+            "image": "https://img-c.udemycdn.com/course/750x422/405818_aa3f_3.jpg",
+            "instructors": [
+                {
+                    "name": "Edwin Diaz",
+                    "jop": "Web Developer & Premium Instructor - 800,000 students",
+                    "image": "https://img-b.udemycdn.com/user/100x100/6772884_fcfc_2.jpg"
+                },
+                {
+                    "name": "Coding Faculty Solutions",
+                    "jop": "Coding Faculty",
+                    "image": "https://img-b.udemycdn.com/user/100x100/34613172_6fb4.jpg"
+                }
+            ],
+            "price": 17.99
+        },
+        {
+            "id": 426196,
+            "title": "JavaScript from Beginner to Expert",
+            "headline": "Become a JavaScript expert in 30 days, even if you are a JS beginner. Become a front-end developer of websites in JS",
+            "rating": 4.2297297,
+            "image": "https://img-c.udemycdn.com/course/750x422/426196_3cb8_4.jpg",
+            "instructors": [
+                {
+                    "name": "Arkadiusz Włodarczyk",
+                    "jop": "Excellent teacher, Expert in Programming",
+                    "image": "https://img-c.udemycdn.com/user/100x100/621716_0514_3.jpg"
+                }
+            ],
+            "price": 14.99
+        },
+        {
+            "id": 584494,
+            "title": "JavaScript for Kids: Code Your Own Games and Apps at Any Age",
+            "headline": "JavaScript coding course for beginners of all ages, build your own interactive games and apps in JavaScript!",
+            "rating": 4.5064936,
+            "image": "https://img-c.udemycdn.com/course/750x422/584494_f309_6.jpg",
+            "instructors": [
+                {
+                    "name": "Bryson Payne",
+                    "jop": "Best-Selling Author & Professor w/students in 178 countries",
+                    "image": "https://img-c.udemycdn.com/user/100x100/12796044_b6aa_5.jpg"
+                }
+            ],
+            "price": 16.99
+        },
+        {
+            "id": 670034,
+            "title": "Advanced Javascript",
+            "headline": "In only seven hours you will learn enough javascript to transform from a Junior JS Dev into a Senior JS Guru",
+            "rating": 4.535593,
+            "image": "https://img-c.udemycdn.com/course/750x422/670034_ce04_6.jpg",
+            "instructors": [
+                {
+                    "name": "Asim Hussain",
+                    "jop": "Conference speaker, published author & passionate teacher",
+                    "image": "https://img-c.udemycdn.com/user/100x100/133370_bfff_10.jpg"
+                }
+            ],
+            "price": 14.99
+        },
+        {
+            "id": 695656,
+            "title": "The Complete JavaScript Course For Web Development Beginners",
+            "headline": "In this course students will learn the basics of JavaScript and beyond to help them in their web development needs",
+            "rating": 4.2352943,
+            "image": "https://img-c.udemycdn.com/course/750x422/695656_4395_7.jpg",
+            "instructors": [
+                {
+                    "name": "Joe Parys",
+                    "jop": "Top-Rated Instructor, 800,000+ Students",
+                    "image": "https://img-b.udemycdn.com/user/100x100/8527674_829c_15.jpg"
+                },
+                {
+                    "name": "Ashutosh Pawar",
+                    "jop": "Entrepreneur, Python, Java & Android Geek",
+                    "image": "https://img-b.udemycdn.com/user/100x100/18558450_3457_6.jpg"
+                },
+                {
+                    "name": "Joe Parys Support",
+                    "jop": "Best-Selling Instructor Proudly Serving 500,000+ Students",
+                    "image": "https://img-b.udemycdn.com/user/100x100/23441044_0d50_8.jpg"
+                }
+            ],
+            "price": 14.99
+        },
+        {
+            "id": 851712,
+            "title": "The Complete JavaScript Course 2022: From Zero to Expert!",
+            "headline": "The modern JavaScript course for everyone! Master JavaScript with projects, challenges and theory. Many courses in one!",
+            "rating": 4.7784243,
+            "image": "https://img-c.udemycdn.com/course/750x422/851712_fc61_6.jpg",
+            "instructors": [
+                {
+                    "name": "Jonas Schmedtmann",
+                    "jop": "Web Developer, Designer, and Teacher",
+                    "image": "https://img-c.udemycdn.com/user/100x100/7799204_2091_5.jpg"
+                }
+            ],
+            "price": 24.99
+        },
+        {
+            "id": 860812,
+            "title": "JavaScript Beginner Bootcamp (2022)",
+            "headline": "JavaScript for Beginners: Projects based learning, whiteboard animations, coding in the browser and quizzes.",
+            "rating": 4.428571,
+            "image": "https://img-c.udemycdn.com/course/750x422/860812_f16e_23.jpg",
+            "instructors": [
+                {
+                    "name": "Rob Merrill",
+                    "jop": "Front End Engineer",
+                    "image": "https://img-c.udemycdn.com/user/100x100/15156806_9489_2.jpg"
+                }
+            ],
+            "price": 18.99
+        },
+        {
+            "id": 861624,
+            "title": "ES6 Javascript: The Complete Developer's Guide",
+            "headline": "ES6 Javascript Development from scratch.  Get practice with live examples and learn exactly where to apply ES6 features.",
+            "rating": 4.6694713,
+            "image": "https://img-c.udemycdn.com/course/750x422/861624_864d_2.jpg",
+            "instructors": [
+                {
+                    "name": "Stephen Grider",
+                    "jop": "Engineering Architect",
+                    "image": "https://img-c.udemycdn.com/user/100x100/5487312_0554.jpg"
+                }
+            ],
+            "price": 15.99
+        },
+        {
+            "id": 886300,
+            "title": "Accelerated JavaScript Training",
+            "headline": "Take a deep dive into JavaScript, a Must-Know Language in Web Development, with a Hands-on, Example-driven Approach",
+            "rating": 4.5462427,
+            "image": "https://img-c.udemycdn.com/course/750x422/886300_3557.jpg",
+            "instructors": [
+                {
+                    "name": "Maximilian Schwarzmüller",
+                    "jop": "AWS certified, Professional Web Developer and Instructor",
+                    "image": "https://img-c.udemycdn.com/user/100x100/13952972_e853.jpg"
+                }
+            ],
+            "price": 14.99
+        }
+    ]
+}
