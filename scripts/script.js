@@ -1,3 +1,9 @@
+// the data that stored in the jsonbin
+var fetched_data;
+
+// the current active tab
+let curr_tab = 'python';
+
 // width for explore button 
 const tabs_width = {
     'python': '8rem',
@@ -20,74 +26,74 @@ const tabs = [
     'draw',
 ];
 
-function stars() {
+function fetch_data() {
+    // we need to featch all data once in first time of page loading not every time when we change tab
+    fetch(`https://api.jsonbin.io/v3/b/62f9008d5c146d63ca6df68c`)
+        .then(response => response.json())
+        .then(data => {
+            fetched_data = data;
+            load_courses(curr_tab);
+        });
+}
+
+function stars(rate) {
+    // create stars rating
     let rating_stars = '';
+    rating_stars += `<span class="stars">${rate}</span>`
     for (let i = 0; i < 4; i++)
         rating_stars += `<span class="fa fa-star stars"></span>\n`;
     rating_stars += '<span class="fa fa-star-half-full stars"></span>\n';
     return rating_stars;
 }
 
-function clear_courses() {
+function load_courses(tab, search_text = '') {
+    const course_data = fetched_data.record[tab];
+    let courses_to_add = document.createElement('div');
+    courses_to_add.innerHTML = `
+        <h3 class="courses-desc">${course_data.header}</h3>
+        <p class="courses-desc">${course_data.description}</p>
+        <button class="explore">Explore ${document.getElementById(`${tab}_label`).innerText}</button>
+        <div class="courses-cards" id = "courses_records">
+        ${course_data.courses.filter(course => course.title.toLowerCase().includes(search_text.toLowerCase())).map(course => (`
+            <div class="card">    
+                <div class="card-img">
+                    <img src="${course.image}" alt="${course.title}" />
+                <h4>${course.title}</h4>
+                <p class="author">${course.instructors[0].name}</p>
+                ${stars(course.rating)}
+                <span class="price">E£${course.price}</span>
+            </div>
+            </div>
+        `)).join('\n')}
+        </div>
+    `;
+    // put courses cards in courses selector
     let courses = document.getElementById('courses-selector');
-    courses.innerHTML = '';
+    courses.replaceChild(courses_to_add, courses.childNodes[0]);
 }
 
-function load_courses(tab) {
-    fetch(`./data/${tab}_res.json`)
-        .then(response => response.json())
-        .then(data => {
-                const courses = document.getElementById('courses-selector');
-                // header of description
-                let head = document.createElement('h3');
-                head.innerHTML = data.header;
-                head.className = 'courses-desc';
-                courses.appendChild(head);
-                // paragraph of description
-                let paragraph = document.createElement('p');
-                paragraph.innerHTML = data.description;
-                paragraph.className = 'courses-desc';
-                courses.appendChild(paragraph);
-                // expolore button
-                let explore_button = document.createElement('button');
-                explore_button.innerHTML = `Explore ${document.getElementById(`${tab}_label`).innerText}`;
-                explore_button.className = 'explore';
-                courses.appendChild(explore_button);
-                // courses cards
-                let courses_cards = document.createElement('div');
-                courses_cards.className = 'courses-cards';
-                for (let course of data.courses) {
-                    let card = document.createElement('div');
-                    card.innerHTML = `
-                        <div class="card-img">
-                            <img src="${course.image}" alt="${course.title}" />
-                            <h4>${course.title}</h4>
-                            <p class="author">${course.instructors[0].name}</p>
-                            <div>
-                            <span class="stars">${course.rating}</span>
-                            ${stars()}
-                            </div>
-                            <span class="price">E£${course.price}</span>
-                        </div>
-                    `;
-                    card.className = "card";
-                    // put card in courses cards
-                    courses_cards.appendChild(card);
-                }
-                // put courses cards in courses selector
-                courses.appendChild(courses_cards);
-        });
-}
-
-let curr_tab = 'python';
-clear_courses();
-load_courses(curr_tab);
+fetch_data();
 
 for (const tab of tabs){
     const tab_button = document.getElementById(tab);
     tab_button.addEventListener("click", () => {
         curr_tab = tab;
-        clear_courses();
         load_courses(curr_tab);
     });
 }
+
+const search_button = document.getElementById("search_button");
+search_button.addEventListener("click", (e) => {
+    e.preventDefault();
+    const search_word = document.getElementById("search_bar_input").value;
+    load_courses(curr_tab, search_word);
+    document.getElementById("courses_records").scrollIntoView({behavior: "smooth", block: "start"});
+});
+
+const search_bar = document.getElementById("search_bar_input");
+search_bar.addEventListener("keydown", (e) => {
+    if(e.key === "Enter"){
+        e.preventDefault();
+        document.getElementById("search_button").click();
+    }
+})
