@@ -43,7 +43,7 @@ section {
 .courses {
     width: 100%;
     margin: 1rem 0rem;
-    border: 1px solid black;
+    border: 1px solid grey;
     padding: 2rem 2rem;
 }
 
@@ -109,7 +109,7 @@ section {
 }
 
 .price {
-    font-size: 1rem;
+    font-size: 1rem !important;
     font-weight: bold;
 }
 
@@ -176,7 +176,7 @@ section {
         font-size: 0.8rem;
     }
     .price {
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
     }
     .card {
         width: 48%;

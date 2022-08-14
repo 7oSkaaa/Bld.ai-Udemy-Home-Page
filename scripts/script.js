@@ -39,7 +39,7 @@ function fetch_data() {
 function stars(rate) {
     // create stars rating
     let rating_stars = '';
-    rating_stars += `<span class="stars">${rate}</span>`
+    rating_stars += `<span class="stars">${rate} </span>`
     for (let i = 0; i < 4; i++)
         rating_stars += `<span class="fa fa-star stars"></span>\n`;
     rating_stars += '<span class="fa fa-star-half-full stars"></span>\n';
@@ -61,7 +61,7 @@ function load_courses(tab, search_text = '') {
                 <h4>${course.title}</h4>
                 <p class="author">${course.instructors[0].name}</p>
                 ${stars(course.rating)}
-                <span class="price">E£${course.price}</span>
+                <p class="price">E£${course.price}</p>
             </div>
             </div>
         `)).join('\n')}
