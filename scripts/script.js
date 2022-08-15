@@ -58,11 +58,11 @@ function load_courses(tab, search_text = '') {
             <div class="course-card">    
                 <div class="card-img">
                     <img src="${course.image}" alt="${course.title}" />
+                </div>
                 <h4>${course.title}</h4>
                 <p class="author">${course.instructors[0].name}</p>
                 ${rating(course.rating)}
                 <p class="price">E£${course.price}</p>
-            </div>
             </div>
         `)).join('\n')}
         </div>
