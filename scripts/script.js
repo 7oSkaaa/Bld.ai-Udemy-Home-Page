@@ -39,10 +39,12 @@ function fetch_data() {
 function rating(rate) {
     // create stars rating
     let rating_stars = '';
-    rating_stars += `<span class="stars">${rate.toPrecision(2)} </span>`
+    rating_stars += `<span class="rating">${rate.toPrecision(2)}  </span>`
+    rating_stars += `<span class="stars">`
     for (let i = 0; i < 4; i++)
-        rating_stars += `<span class="fa fa-star stars"></span>\n`;
-    rating_stars += '<span class="fa fa-star-half-full stars"></span>\n';
+        rating_stars += `<i class="fa fa-star stars"></i>\n`;
+    rating_stars += '<i class="fa fa-star-half-full stars"></i>\n';
+    rating_stars += `</span>`;
     return rating_stars;
 }
 
@@ -62,7 +64,9 @@ function load_courses(tab, search_text = '') {
                 </div>
                 <h4>${course.title}</h4>
                 <p class="author">${course.instructors[0].name}</p>
-                ${rating(course.rating)}
+                <div class="rating">
+                    ${rating(course.rating)}
+                </div>
                 <p class="price">E£${course.price}</p>
             </div>
         `)).join('\n')}
