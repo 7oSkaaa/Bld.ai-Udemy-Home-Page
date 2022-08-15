@@ -91,6 +91,13 @@ section {
 
 ._card img {
     width: 100%;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+._card img:hover {
+    -webkit-filter: grayscale(30%);
+    filter: grayscale(30%);
 }
 
 .stars,
