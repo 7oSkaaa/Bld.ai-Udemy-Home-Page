@@ -51,13 +51,12 @@ function rating(rate) {
 function load_courses(tab, search_text = '') {
     const course_data = fetched_data.record[tab];
     let courses_to_add = document.createElement('div');
-    courses_to_add.className = 'courses';
     courses_to_add.innerHTML = `
         <h3 class="courses-desc">${course_data.header}</h3>
         <p class="courses-desc">${course_data.description}</p>
         <button class="explore">Explore ${document.getElementById(`${tab}_label`).innerText}</button>
         <div class="courses-cards" id = "courses_records">
-        ${course_data.courses.filter(course => course.title.toLowerCase().includes(search_text.toLowerCase())).map(course => (`
+          ${course_data.courses.filter(course => course.title.toLowerCase().includes(search_text.toLowerCase())).map(course => (`
             <div class="_card">    
                 <div class="_card-img">
                     <img src="${course.image}" alt="${course.title}" />
@@ -69,7 +68,7 @@ function load_courses(tab, search_text = '') {
                 </div>
                 <p class="price">E£${course.price}</p>
             </div>
-        `)).join('\n')}
+          `)).join('\n')}
         </div>
     `;
     // put courses cards in courses selector
