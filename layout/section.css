@@ -85,11 +85,11 @@ section {
     gap: 0.9rem;
 }
 
-.course-card {
+._card {
     width: 19rem;
 }
 
-.course-card img {
+._card img {
     width: 100%;
 }
 
@@ -111,6 +111,12 @@ section {
 .price {
     font-size: 1rem !important;
     font-weight: bold;
+}
+
+._card h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 0.6rem;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -138,7 +144,7 @@ section {
     .courses-cards {
         justify-content: space-evenly;
     }
-    .course-card {
+    ._card {
         width: 45%;
     }
 }
@@ -178,13 +184,16 @@ section {
     .price {
         font-size: 0.7rem !important;
     }
-    .course-card {
+    ._card {
         width: 48%;
+    }
+    ._card h4 {
+        font-size: 0.8rem;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .course-card {
+    ._card {
         width: 100%;
     }
 }
