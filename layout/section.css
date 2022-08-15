@@ -85,11 +85,11 @@ section {
     gap: 0.9rem;
 }
 
-.card {
+.course-card {
     width: 19rem;
 }
 
-.card img {
+.course-card img {
     width: 100%;
 }
 
@@ -138,7 +138,7 @@ section {
     .courses-cards {
         justify-content: space-evenly;
     }
-    .card {
+    .course-card {
         width: 45%;
     }
 }
@@ -178,13 +178,13 @@ section {
     .price {
         font-size: 0.7rem !important;
     }
-    .card {
+    .course-card {
         width: 48%;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .card {
+    .course-card {
         width: 100%;
     }
 }
