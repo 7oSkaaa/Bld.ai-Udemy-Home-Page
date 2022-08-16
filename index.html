@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Courses - Learn Anything, On Your Schedule | Udemy</title>
+    <title>Online courses - Learn Anything, On Your Schedule | Udemy</title>
     <link rel="stylesheet" href="./style.css">
     <link type="image/x-icon" href="https://i.postimg.cc/rFfXCsQx/Untitled-2.png" rel="icon" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -21,18 +21,18 @@
         <ul class="nav-items">
             <button class="menu"><i class="fa fa-align-justify"></i></button>
             <li><img class="logo" src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="Logo" /></li>
-            <li><a class="navbar-category" href="#">Categories</a></li>
-            <li class="search-container dis-item">
+            <li class="navbar-category"><a href="#">Categories</a></li>
+            <li class="search-container disappear-item">
                 <form action="/action_page">
                     <button class="search-icon" type="submit"><span class="material-symbols-outlined">search</span></button>
                     <input class="search-bar nav-item menu-item" type="text" placeholder="Search for anything" name="search" required>
                 </form>
             </li>
-            <li class="dis-item" id="udemy-bus" style="width:12rem;"><a href="#">Udemy Business</a></li>
-            <li class="dis-item" id="teach-udemy" style="width:12rem;"><a href="#">Teach on Udemy</a></li>
-            <li class="shopping-cart dis-item"><span class="material-symbols-outlined">shopping_cart</span></li>
+            <li class="disappear-item" id="udemy-bus"><a href="#">Udemy Business</a></li>
+            <li class="disappear-item" id="teach-udemy"><a href="#">Teach on Udemy</a></li>
+            <li class="shopping-cart disappear-item"><span class="material-symbols-outlined">shopping_cart</span></li>
         </ul>
-        <div class="nav-buttons dis-item">
+        <div class="nav-buttons disappear-item">
             <button id="log" type="button">Login</button>
             <button id="reg" type="button">Sign up</button>
             <button id="language" type="button"><span class="material-symbols-outlined">language</span></button>
@@ -41,7 +41,7 @@
     <header class="head-continer">
         <div class="head-bar">
             <h1>New to Udemy? Lucky you.</h1>
-            <h3>Courses start at E£169.99.Get your new-student offer befort it expires.</h3>
+            <h3>courses start at E£169.99.Get your new-student offer befort it expires.</h3>
         </div>
         <img src="https://i.ibb.co/2qHbQqM/download.png" alt="alarm" class="alarmphoto" />
     </header>
@@ -49,6 +49,24 @@
         <div class="above-courses">
             <h1>A broad selection of courses</h1>
             <p>Choose from 185,000 online video courses with new additions published every month</p>
+        </div>
+        <div class="courses-categories">
+            <form class="courses-tab">
+                <input checked="checked" id="course-1" type="radio" name="courses-tab" />
+                <label for="course-1">Python</label>
+                <input id="course-2" type="radio" name="courses-tab" />
+                <label for="course-2">Excel</label></li>
+                <input id="course-3" type="radio" name="courses-tab" />
+                <label for="course-3">Web Development</label>
+                <input id="course-4" type="radio" name="courses-tab" />
+                <label for="course-4">Java Script</label>
+                <input id="course-5" type="radio" name="courses-tab" />
+                <label for="course-5">Data Science</label>
+                <input id="course-6" type="radio" name="courses-tab" />
+                <label for="course-6">AWS Certification</label>
+                <input id="course-7" type="radio" name="courses-tab" />
+                <label for="course-7">Drawing</label>
+            </form>
         </div>
         <div class="courses">
             <h3 class="courses-desc">Expand your career opportunities with Python</h3>

@@ -14,6 +14,32 @@ section {
     margin: 2rem 0rem;
 }
 
+.courses-tab {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 2rem;
+}
+
+.courses-tab label {
+    font-weight: bold;
+    color: grey;
+    cursor: pointer;
+}
+
+.courses-tab>input[type="radio"] {
+    display: none;
+}
+
+.courses-tab>input[type="radio"]:checked+label {
+    color: black;
+}
+
+.courses-tab>input[type="radio"]:hover+label {
+    color: black;
+}
+
 .courses {
     width: 100%;
     margin: 1rem 0rem;
@@ -90,6 +116,12 @@ section {
     section {
         width: 90%;
     }
+    .courses h3 {
+        font-size: 1.5rem;
+    }
+    .courses p {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -97,25 +129,33 @@ section {
         width: 80%;
     }
     .courses h3 {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     .courses p {
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
 }
 
 @media only screen and (max-width: 800px) {
+    section {
+        width: 100%;
+    }
     .courses h3 {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
     .courses p {
-        font-size: 0.5rem;
+        font-size: 0.8rem;
     }
     .courses-desc {
         width: 100%;
     }
     .above-courses {
         font-size: 1rem;
+        width: 100%;
+        padding-left: 1rem;
+    }
+    .courses-tab {
+        padding-left: 1rem;
     }
     .explore {
         width: 7rem;
