@@ -87,6 +87,8 @@ section {
 
 ._card {
     width: 19rem;
+    position: relative;
+    height: 20rem;
 }
 
 ._card img {
@@ -132,6 +134,15 @@ section {
     font-size: 1.1rem;
     font-weight: bold;
     margin-top: 0.6rem;
+}
+
+._card p {
+    margin: 0rem;
+}
+
+._card_information {
+    position: absolute;
+    bottom: 0rem;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -201,6 +212,7 @@ section {
     }
     ._card {
         width: 48%;
+        height: 17.5rem;
     }
     ._card h4 {
         font-size: 0.8rem;
@@ -210,5 +222,10 @@ section {
 @media only screen and (max-width: 500px) {
     ._card {
         width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ._card_information {
+        position: relative;
     }
 }
