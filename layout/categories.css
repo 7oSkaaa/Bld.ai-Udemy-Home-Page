@@ -3,5 +3,9 @@ figure img {
 }
 
 figure img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    width: 80% !important;
 }

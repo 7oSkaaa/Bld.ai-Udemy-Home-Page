@@ -1,19 +1,19 @@
 // the data that stored in the jsonbin
-var fetched_data;
+let fetched_data = {
+    'python': {},
+    'excel': {},
+    'web': {},
+    'js': {},
+    'data': {},
+    'aws': {},
+    'draw': {}
+};
 
 // the current active tab
 let curr_tab = 'python';
 
-// width for explore button 
-const tabs_width = {
-    'python': '8rem',
-    'excel': '8rem',
-    'web': '12rem',
-    'js': '10rem',
-    'data': '10rem',
-    'aws': '10rem',
-    'draw': '8rem',
-}
+// number of cards in each column
+let n_cards = 4;
 
 // tabs in page
 const tabs = [
@@ -31,7 +31,8 @@ function fetch_data() {
     fetch(`https://api.jsonbin.io/v3/b/62f9008d5c146d63ca6df68c`)
         .then(response => response.json())
         .then(data => {
-            fetched_data = data;
+            for (let tab of tabs)
+                fetched_data[tab] = data.record[tab];
             load_courses(curr_tab);
         });
 }
@@ -48,16 +49,13 @@ function rating(rate) {
     return rating_stars;
 }
 
-function load_courses(tab, search_text = '') {
-    const course_data = fetched_data.record[tab];
-    let courses_to_add = document.createElement('div');
-    courses_to_add.innerHTML = `
-        <h3 class="courses-desc">${course_data.header}</h3>
-        <p class="courses-desc">${course_data.description}</p>
-        <button class="explore">Explore ${document.getElementById(`${tab}_label`).innerText}</button>
-        <div class="courses-cards" id = "courses_records">
-          ${course_data.courses.filter(course => course.title.toLowerCase().includes(search_text.toLowerCase())).map(course => (`
-            <div class="_card">    
+// create card for each course
+function create_card(course) {
+    if (!course) return '';
+    let card = document.createElement('div');
+    card.innerHTML = `
+        <div class="col-lg-3 col-md-4 col-sm-12">
+            <div class="_card">
                 <div class="_card-img">
                     <img src="${course.image}" alt="${course.title}" />
                 </div>
@@ -70,7 +68,84 @@ function load_courses(tab, search_text = '') {
                     <p class="price">E£${course.price}</p>
                 </div>
             </div>
-          `)).join('\n')}
+        </div>
+    `;
+    return card.innerHTML;
+}
+
+// create n-cards in each row
+function create_row_cards(courses, index) {
+    let row_cards = ``;
+    for (let card = 0; card < n_cards; card++)
+        row_cards += `${create_card(courses[index++])}\n`;
+    return row_cards;
+}
+
+// To make active class on the first course
+function is_active(row_number) {
+    return (row_number === 0 ? "active" : "");
+}
+
+// Create courses carousel
+function create_courses(courses, search_text) {
+    if (!courses) return '';
+    let filtered_courses = courses.filter(course => course.title.toLowerCase().includes(search_text.toLowerCase()));
+    let rows = Math.ceil(filtered_courses.length / n_cards);
+    let courses_html = ``;
+    let index = 0;
+    for (let row = 0; row < rows; row++, index += n_cards) {
+        courses_html += `
+            <div class="carousel-item ${is_active(row)}">
+                <div class="row">
+                    ${create_row_cards(filtered_courses, index)}
+                </div>
+            </div>
+        `;
+    }
+    return courses_html;
+}
+
+// Create Buttons if there are more than 4 courses
+function create_buttons(courses, search_text) {
+    if (!courses) return '';
+    let filtered_courses = courses.filter(course => course.title.toLowerCase().includes(search_text.toLowerCase()));
+    if (filtered_courses.length <= n_cards) return '';
+    let buttons = `
+        <div class="row">
+            <div class="col-12">
+                <a class="carousel-control-prev text-dark" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="fa fa-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next text-dark" href="#myCarousel" role="button" data-slide="next">
+                    <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    `;
+    return buttons;
+}
+
+// Draw courses in the page
+function load_courses(tab, search_text = '') {
+    const course_data = fetched_data[tab];
+    let courses_to_add = document.createElement('div');
+    courses_to_add.innerHTML = `
+        <h3 class="courses-desc">${course_data.header}</h3>
+        <p class="courses-desc">${course_data.description}</p>
+        <button class="explore">Explore ${document.getElementById(`${tab}_label`).innerText}</button>
+        <div class="courses-cards" id = "courses_records">
+            <div class="container">
+                <div class="row mx-auto my-auto">
+                    <div id="myCarousel" class="carousel slide w-100" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            ${create_courses(course_data.courses, search_text)}
+                        </div>
+                    </div>
+                </div>
+                ${create_buttons(course_data.courses, search_text)}
+            </div>
         </div>
     `;
     // put courses cards in courses selector
@@ -78,8 +153,35 @@ function load_courses(tab, search_text = '') {
     courses.replaceChild(courses_to_add, courses.childNodes[0]);
 }
 
+// changing number of cards in each row when screen size is changed
+const changeNCourses = (n) => {
+    n_cards = n;
+    const search_word = document.getElementById("search_bar_input").value;
+    load_courses(curr_tab, search_word);
+};
+
+// for know how many cards we need to show in each row
+const mediaQuery = () => {
+    let screens = [
+        window.matchMedia("(min-width: 100px) and (max-width: 599px)"),
+        window.matchMedia("(min-width: 600px) and (max-width: 699px)"),
+        window.matchMedia("(min-width: 700px) and (max-width: 1000px)"),
+        window.matchMedia("(min-width: 1200px)")
+    ];
+    screens.forEach((screen, index) => {
+        screen.addListener((x) => { 
+            if (x.matches) changeNCourses(index + 1) });
+            if (screen.matches) 
+                changeNCourses(index + 1);
+    });
+};
+
+// main functions
+
+// to fetch data from the server
 fetch_data();
 
+// for swapping tabs
 for (const tab of tabs){
     const tab_button = document.getElementById(tab);
     tab_button.addEventListener("click", () => {
@@ -88,6 +190,7 @@ for (const tab of tabs){
     });
 }
 
+// Search bar functionality
 const search_button = document.getElementById("search_button");
 search_button.addEventListener("click", (e) => {
     e.preventDefault();
@@ -102,4 +205,7 @@ search_bar.addEventListener("keydown", (e) => {
         e.preventDefault();
         document.getElementById("search_button").click();
     }
-})
+});
+
+// media query for changing number of courses
+mediaQuery();
