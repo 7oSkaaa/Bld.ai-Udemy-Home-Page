@@ -14,4 +14,10 @@ figure img:hover {
     .card-img-top {
         width: 100% !important;
     }
+    .card {
+        width: auto !important;
+    }
+    .card-title {
+        font-size: 1.2rem !important;
+    }
 }
