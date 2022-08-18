@@ -163,6 +163,7 @@ input:focus {
 
 .menu {
     display: none;
+    color: black;
 }
 
 #teach-udemy,
