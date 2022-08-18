@@ -130,18 +130,21 @@ input:focus {
     color: white;
     font-size: 0.8rem;
     font-weight: bold;
+    border: 1px solid black;
 }
 
 #_log {
     font-weight: bold;
     font-size: 0.8rem;
     background: white;
+    border: 1px solid black;
 }
 
 #_language {
     width: 3rem;
     background: none;
     font-weight: bold;
+    border: 1px solid black;
 }
 
 #_log:hover,
@@ -169,6 +172,10 @@ input:focus {
 
 .material-symbols-outlined {
     line-height: 1.4 !important;
+}
+
+._navbar button {
+    border-radius: 10%;
 }
 
 @media only screen and (max-width: 800px) {

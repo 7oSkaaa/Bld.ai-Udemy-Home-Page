@@ -207,5 +207,9 @@ search_bar.addEventListener("keydown", (e) => {
     }
 });
 
+function handleValueChange(e) {
+    load_courses(curr_tab, e.value);
+}
+
 // media query for changing number of courses
 mediaQuery();
