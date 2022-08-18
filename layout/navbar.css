@@ -163,7 +163,6 @@ input:focus {
 
 .menu {
     display: none;
-    color: black;
 }
 
 #teach-udemy,
@@ -189,6 +188,7 @@ input:focus {
         border: none;
         font-size: 1.2rem;
         display: initial;
+        color: black;
     }
     .menu:hover {
         color: purple;

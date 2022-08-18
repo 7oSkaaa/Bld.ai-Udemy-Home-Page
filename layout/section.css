@@ -223,10 +223,13 @@ section {
 @media only screen and (max-width: 500px) {
     ._card {
         width: 100%;
-        height: 18rem;
+        height: 17rem;
         position: relative;
     }
     ._card_information {
         position: relative;
+    }
+    .courses {
+        padding: 1rem 2rem;
     }
 }
