@@ -233,3 +233,15 @@ section {
         padding: 1rem 2rem;
     }
 }
+
+@media only screen and (max-width: 375px) {
+    ._card {
+        height: 15rem;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    ._card {
+        height: 14rem;
+    }
+}
