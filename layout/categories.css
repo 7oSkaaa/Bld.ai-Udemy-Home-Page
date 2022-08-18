@@ -9,3 +9,9 @@ figure img:hover {
 .card-img-top {
     width: 80% !important;
 }
+
+@media only screen and (max-width: 500px) {
+    .card-img-top {
+        width: 100% !important;
+    }
+}
