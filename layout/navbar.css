@@ -40,6 +40,7 @@ form {
     position: relative;
     display: flex;
     align-items: center;
+    background: none;
 }
 
 input {
