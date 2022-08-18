@@ -64,6 +64,7 @@ input:focus {
 ._navbar a:hover,
 .shopping-cart:hover {
     color: purple;
+    text-decoration: none;
 }
 
 ._navbar a {
