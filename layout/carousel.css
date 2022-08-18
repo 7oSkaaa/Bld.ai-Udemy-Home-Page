@@ -66,3 +66,21 @@
         top: -13rem !important;
     }
 }
+
+@media only screen and (max-width: 375px) {
+    .carousel-control-prev {
+        top: -11.5rem !important;
+    }
+    .carousel-control-next {
+        top: -11.5rem !important;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .carousel-control-prev {
+        top: -11.5rem !important;
+    }
+    .carousel-control-next {
+        top: -11.5rem !important;
+    }
+}
