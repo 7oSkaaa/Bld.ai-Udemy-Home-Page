@@ -196,7 +196,7 @@ search_button.addEventListener("click", (e) => {
     e.preventDefault();
     const search_word = document.getElementById("search_bar_input").value;
     load_courses(curr_tab, search_word);
-    document.getElementById("courses_records").scrollIntoView({behavior: "smooth", block: "start"});
+    document.getElementById("section_view").scrollIntoView({behavior: "smooth", block: "start"});
 });
 
 const search_bar = document.getElementById("search_bar_input");
