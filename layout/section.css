@@ -43,7 +43,7 @@ section {
 .courses {
     width: 100%;
     margin: 1rem 0rem;
-    border: 1px solid grey;
+    border: 1px solid #c5c3c3;
     padding: 2rem 2rem;
 }
 
@@ -70,6 +70,9 @@ section {
     margin: 1rem 0rem;
     font-size: 0.85rem;
     font-weight: bold;
+    border-radius: 5%;
+    border: 1px solid black;
+    color: black;
 }
 
 .explore:hover {
@@ -226,16 +229,19 @@ section {
     ._card_information {
         position: relative;
     }
+    .courses {
+        padding: 1rem 2rem;
+    }
 }
 
 @media only screen and (max-width: 375px) {
     ._card {
-        height: 15rem;
+        height: 16rem;
     }
 }
 
 @media only screen and (max-width: 350px) {
     ._card {
-        height: 14rem;
+        height: 15rem;
     }
 }
