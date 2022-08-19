@@ -113,14 +113,12 @@ function create_buttons(courses, search_text) {
     let buttons = `
         <div class="row">
             <div class="col-12">
-                <a class="carousel-control-prev text-dark" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="fa fa-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next text-dark" href="#myCarousel" role="button" data-slide="next">
-                    <span class="fa fa-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeader" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselHeader" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     `;
@@ -138,7 +136,7 @@ function load_courses(tab, search_text = '') {
         <div class="courses-cards" id = "courses_records">
             <div class="container">
                 <div class="row mx-auto my-auto">
-                    <div id="myCarousel" class="carousel slide w-100" data-ride="carousel">
+                    <div class="container_ carousel slide" id="carouselHeader" data-ride="carousel" data-interval="false">
                         <div class="carousel-inner" role="listbox">
                             ${create_courses(course_data.courses, search_text)}
                         </div>
