@@ -223,7 +223,7 @@ section {
 @media only screen and (max-width: 500px) {
     ._card {
         width: 100%;
-        height: 17rem;
+        height: 18rem;
         position: relative;
     }
     ._card_information {
@@ -236,12 +236,12 @@ section {
 
 @media only screen and (max-width: 375px) {
     ._card {
-        height: 15rem;
+        height: 16rem;
     }
 }
 
 @media only screen and (max-width: 350px) {
     ._card {
-        height: 14rem;
+        height: 15rem;
     }
 }
