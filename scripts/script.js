@@ -38,13 +38,20 @@ function fetch_data() {
 }
 
 function rating(rate) {
-    // create stars rating
-    let rating_stars = '';
+    // create dynamic stars rating
+    const full_star = `<i class="fa fa-star stars"></i>\n`;
+    const empty_star = `<i class="fa-regular fa-star stars"></i>\n`;
+    const half_star = `<i class="fa fa-star-half-full stars"></i>\n`;
+    let rating_stars = ``
+    let stars_left = 5;
     rating_stars += `<span class="rating">${rate.toPrecision(2)}  </span>`
     rating_stars += `<span class="stars">`
-    for (let i = 0; i < 4; i++)
-        rating_stars += `<i class="fa fa-star stars"></i>\n`;
-    rating_stars += '<i class="fa fa-star-half-full stars"></i>\n';
+    for (let i = 0; i < Math.floor(rate); i++, stars_left--)
+        rating_stars += full_star;
+    if (Math.floor(rate) === parseInt(rate, 10))
+        rating_stars += half_star, stars_left--;
+    while (stars_left--)
+        rating_stars += empty_star;
     rating_stars += `</span>`;
     return rating_stars;
 }
