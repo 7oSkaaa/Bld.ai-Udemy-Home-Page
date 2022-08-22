@@ -92,7 +92,7 @@ section {
 ._card {
     width: auto;
     position: relative;
-    height: 19rem;
+    height: 18rem;
 }
 
 ._card img {
@@ -117,7 +117,6 @@ section {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.1rem;
-    width: auto;
 }
 
 .author {
@@ -139,6 +138,11 @@ section {
     font-size: 1.1rem;
     font-weight: bold;
     margin-top: 0.6rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 ._card p {
@@ -167,13 +171,19 @@ section {
         width: 80%;
     }
     .courses h3 {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     .courses p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .courses-cards {
         justify-content: space-between;
+    }
+    ._card {
+        height: 13.5rem;
+    }
+    .rating {
+        font-size: 0.8rem;
     }
 }
 
@@ -214,7 +224,7 @@ section {
     }
     ._card {
         width: 100%;
-        height: 14rem;
+        height: 13.5rem;
     }
     ._card h4 {
         font-size: 0.8rem;
