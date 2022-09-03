@@ -1,4 +1,6 @@
-@import "./Layout/index.css";
-@import "./Layout/navbar.css";
-@import "./Layout/header.css";
-@import "./Layout/section.css";
+@import "./layout/index.css";
+@import "./layout/navbar.css";
+@import "./layout/header.css";
+@import "./layout/section.css";
+@import "./layout/categories.css";
+@import "./layout/carousel.css";

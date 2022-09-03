@@ -43,7 +43,7 @@ section {
 .courses {
     width: 100%;
     margin: 1rem 0rem;
-    border: 1px solid black;
+    border: 1px solid #c5c3c3;
     padding: 2rem 2rem;
 }
 
@@ -63,12 +63,16 @@ section {
 }
 
 .explore {
-    width: 8rem;
+    width: auto;
+    padding: 1rem;
     background: none;
     height: 3.5rem;
     margin: 1rem 0rem;
     font-size: 0.85rem;
     font-weight: bold;
+    border-radius: 5%;
+    border: 1px solid black;
+    color: black;
 }
 
 .explore:hover {
@@ -82,19 +86,37 @@ section {
     justify-content: space-between;
     align-items: stretch;
     gap: 0.9rem;
+    position: relative;
 }
 
-.card {
-    width: 15rem;
+._card {
+    width: auto;
+    position: relative;
+    height: 18rem;
 }
 
-.card img {
+._card img {
     width: 100%;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+._card img:hover {
+    -webkit-filter: grayscale(30%);
+    filter: grayscale(30%);
+}
+
+.stars,
+.rating {
+    color: rgb(243, 166, 24);
+    font-weight: bold;
 }
 
 .stars {
-    color: orange;
-    font-weight: bold;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.1rem;
 }
 
 .author {
@@ -108,8 +130,28 @@ section {
 }
 
 .price {
-    font-size: 1rem;
+    font-size: 1rem !important;
     font-weight: bold;
+}
+
+._card h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 0.6rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+._card p {
+    margin: 0rem;
+}
+
+._card_information {
+    position: absolute;
+    bottom: 0rem;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -129,10 +171,19 @@ section {
         width: 80%;
     }
     .courses h3 {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     .courses p {
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+    .courses-cards {
+        justify-content: space-between;
+    }
+    ._card {
+        height: 13.5rem;
+    }
+    .rating {
+        font-size: 0.8rem;
     }
 }
 
@@ -158,9 +209,10 @@ section {
         padding-left: 1rem;
     }
     .explore {
-        width: 7rem;
+        width: auto;
         height: 2.5rem;
-        font-size: 0.5rem;
+        font-size: 0.7rem;
+        padding: 0.5rem;
     }
     .courses-cards {
         width: 100%;
@@ -168,6 +220,39 @@ section {
         font-size: 0.8rem;
     }
     .price {
-        font-size: 0.7rem;
+        font-size: 0.7rem !important;
+    }
+    ._card {
+        width: 100%;
+        height: 13.5rem;
+    }
+    ._card h4 {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    ._card {
+        width: 100%;
+        height: 18rem;
+        position: relative;
+    }
+    ._card_information {
+        position: relative;
+    }
+    .courses {
+        padding: 1rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    ._card {
+        height: 16rem;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    ._card {
+        height: 15rem;
     }
 }
